@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/device.css" />
     <link rel="stylesheet" href="assets/css/activity.css" />
+    <link rel="preload" href="assets/css/fonts/SegoeScript/segoesc.ttf" as="font" type="truetype" crossorigin="anonymous">
   </head>
 
   <body>
@@ -106,15 +107,19 @@
                     <div class="config_cont">
                       <div class="noOfDigits_cont">
                         <div class="title_txt">Number of Digits</div>
-                        <button class="btn btn_minus" title="Decrement" disabled="disabled"><span>&#8722;</span></button>
-                        <input id="noOfDigitsInput_txt" type="number" value="1" min="1" max="5" class="bold" disabled="disabled"/>
-                        <button class="btn btn_plus" title="Increment"><span>&#43;</span></button>                      
+                        <div>
+                          <button class="btn btn_minus" title="Decrement" disabled="disabled"><span>&#8722;</span></button>
+                          <input id="noOfDigitsInput_txt" type="number" value="1" min="1" max="5" class="" disabled="disabled"/>
+                          <button class="btn btn_plus" title="Increment"><span>&#43;</span></button>   
+                        </div>                   
                       </div>
                       <div class="maxTerms_cont">
                         <div class="title_txt">Maximum Terms</div>
+                        <div>
                         <button class="btn btn_minus" title="Decrement" disabled="disabled"><span>&#8722;</span></button>
-                        <input id="maxTermsInput_txt" type="number" value="2" min="2" max="5" class="bold" disabled="disabled"/>
-                        <button class="btn btn_plus" title="Increment"><span>&#43;</span></button>                      
+                        <input id="maxTermsInput_txt" type="number" value="2" min="2" max="5" class="" disabled="disabled"/>
+                        <button class="btn btn_plus" title="Increment"><span>&#43;</span></button>       
+                      </div>               
                       </div>
                     </div>
                                       
@@ -127,7 +132,7 @@
                       <div class="wrong_mc">&#10006;</div>
                       <div class="correct_mc">&#10004;</div>
                       <div class="ques_content">
-                        <div class="qNo_txt">Q1: What is the value of?</div>                      
+                        <div class="qNo_txt">Q1: What is the value of:</div>                      
                         <div class="qtn_txt bold">QUESTION</div>
                       </div>
                       <div class="ans_content">
@@ -155,105 +160,108 @@
               </div>
               <div class="popupcontent">
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>1.</b></span>
-                  <p><b>
+                  <span class="procstepno bold">1.</span>
+                  <p>
                     This exploriment deals with addition of variables. We have
                     a set of five different birds, each represented by an
                     algebraic variable (like 'a', 'b', etc). We are also given
                     how many birds of each type are there (value of variable).
                     As an example, we could have -
-                  </b></p>
+                  </p>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="eaglePix"></div>
-                      <p class="bold"><b>a = numb. of Eagles = 4</b></p>
+                      <p class="bold">a = numb. of Eagles = 4</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="owlPix"></div>
-                      <p class="bold"><b>b = numb. of Owls = 3</b></p>
+                      <p class="bold">b = numb. of Owls = 3</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="parrotPix"></div>
-                      <p class="bold"><b>c = numb. of Parrots = 5</b></p>
+                      <p class="bold">c = numb. of Parrots = 5</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="pelicanPix"></div>
-                      <p class="bold"><b>d = numb. of Pelicans = 2</b></p>
+                      <p class="bold">d = numb. of Pelicans = 2</p>
                     </div>
                     <div style="width: 450px; float: left; align-items: center; display: flex; flex-direction: row;">
                       <div class="robinPix"></div>
-                      <p class="bold"><b>e = numb. of Robins = 1</b></p>
+                      <p class="bold">e = numb. of Robins = 1</p>
                     </div>
                   
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>2.</b></span>
-                  <p><b>You would be asked a question like this:</b></p>
-                  <p class="bold"><b>What is the Value of -</b></p>
-                  <p class="bold"><b>a + b + c</b></p>
+                  <span class="procstepno bold">2.</span>
+                  <p>You would be asked a question like this:</p>
+                  <p class="bold">What is the Value of -</p>
+                  <p class="bold">a + b + c</p>
                   <p>
-                    <b>From the information given, you have to add the respective
-                    figures like this -</b>
+                   From the information given, you have to add the respective
+                    figures like this -
                   </p>
-                  <p class="bold"><b>4 + 3 + 5 = 12</b></p>
+                  <p class="bold">4 + 3 + 5 = 12</p>
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>3.</b></span>
-                  <p><b>Now, enter your answer in the space provided,</b></p>
+                  <span class="procstepno bold">3.</span>
+                  <p>Now, enter your answer in the space provided,</p>
                   <!-- <p class="bold">Value = 12</p> -->
-                  <div class="inst_ans_content">
+                  <span class="bold" style="float: left;margin-top: 0.9rem;">Value</span> 
+                  <div class="inst_ans_content" style="margin-left: 4rem;">
                     <div class="numbInput_label bold">=</div>
                     <div class="numbInput_txt bold">0</div>
                   </div>
-                  <p><b>and then press the OK button.</b></p>                  
+                  <p>and then press the <span class="bold">Ok</span> button.</p>                  
                   <div class="btn btn_ok">Ok</div>
-                  <p><b>
+                  <p>
                     You would be immediately told whether your answer is
                     correct or wrong, with the following symbols:
-                  </b></p>
-                  <div class="correct">&#10004;</div>
-                  <div class="wrong">&#10006;</div>
+                 </p>
+                 <div>
+                  <div class="correct" style="display: inline-block;">&#10004;</div> <span style="padding: 0px 15px;">Correct</span></div>
+                  <div>
+                  <div class="wrong" style="display: inline-block;">&#10006;</div>  <span style="padding: 0px 15px;">Wrong</span></div>
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>4.</b></span>
-                  <p><b>
+                  <span class="procstepno bold">4.</span>
+                  <p>
                     If you are wrong, the <b class="bold">Explain</b> button will appear,
                     giving you an opportunity to see the answer.
-                  </b></p>
+                  </p>
                   <button class="btn btn_explain">Explain</button>                
-                  <p><b>
+                  <p>
                     You will also see the <b class="bold">Next</b> button. Pressing it will
                     give the next question.
-                  </b></p>
+                  </p>
                   <button class="btn btn_next">Next</button>
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>5.</b></span>
-                  <p><b>
+                  <span class="procstepno bold">5.</span>
+                  <p>
                     The exploriment scores your answers. In case you get 4
                     answers right out of 6, your score would be-
-                  </b></p>
+                  </p>
                   <div class="score_cont">
                     <div class="score_title">Score</div>
                     <div class="score">4/6</div>                    
                   </div>
-                  <p><b>
+                  <p>
                     You can reset your score and start all over again by
                     clicking on the <b class="bold">Reset</b> button.
-                  </b></p>
+                  </p>
                   <button class="btn btn_reset">Reset</button>
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>6.</b></span>
-                  <p><b>
+                  <span class="procstepno bold">6.</span>
+                  <p>
                     At the top left, is the configuration manager. You can use
                     it to decide on the number of digits and the number of
                     terms.
-                  </b></p>
+                 </p>
                   <div class="config_cont">
                     <div style="margin-right: 1rem;">
                       <div class="bold">Number of Digits</div>
@@ -268,29 +276,29 @@
                       <button class="btn plus"><span>&#43;</span></button>                      
                     </div>
                   </div>
-                  <p><b>
+                  <p>
                     The number of digits denotes the size of the numbers to
                     add. If the number of digits is "1", then all bird counts
                     are 1 digit numbers.
-                  </b></p>
-                  <p><b>
+                  </p>
+                  <p>
                     If the number of digits is 5, you would have 12345 owls
                     and 67544 parrots.
-                  </b></p>
-                  <p><b>The number of digits can vary between 1 and 5.</b></p>
+                  </p>
+                  <p>The number of digits can vary between 1 and 5.</p>
                 </div>
                 <hr />
                 <div class="procBox container">
-                  <span class="procstepno bold"><b>7.</b></span>
-                  <p><b>
+                  <span class="procstepno bold">7.</span>
+                  <p>
                     Maximum terms denotes the maximum number of terms that are
                     possible in the given algebraic expression.
-                  </b></p>
-                  <p><b>A two-termed expression is -</b></p>
-                  <p class="bold"><b>a + b</b></p>
-                  <p><b>While a four-termed expression is</b></p>
-                  <p class="bold"><b>a + b + c + d</b></p>
-                  <p><b>The maximum number of terms can vary between 2 and 5.</b></p>
+                  </p>
+                  <p>A two-termed expression is -</p>
+                  <p class="bold">a + b</p>
+                  <p>While a four-termed expression is</p>
+                  <p class="bold">a + b + c + d</p>
+                  <p>The maximum number of terms can vary between 2 and 5.</p>
                 </div>
               </div>
             </div>
@@ -372,17 +380,20 @@
               </div>              
             </div>            
             <div class="birdsAnswer_container">
-              <div class="exprs_txt">
-                <div id="expr1_txt">A</div>
-                <div id="exprPlus1_mc">+</div>
-                <div id="expr2_txt">A</div>
-                <div id="exprPlus2_mc">+</div>
-                <div id="expr3_txt">A</div>
-                <div id="exprPlus3_mc">+</div>
-                <div id="expr4_txt">A</div>
-                <div id="exprPlus4_mc">+</div>
-                <div id="expr5_txt">A</div>
-              </div>
+              
+                <div class="exprs_txt">
+                  <div id="expr1_txt">A</div>
+                  <div id="exprPlus1_mc">+</div>
+                  <div id="expr2_txt">A</div>
+                  <div id="exprPlus2_mc">+</div>
+                  <div id="expr3_txt">A</div>
+                  <div id="exprPlus3_mc">+</div>
+                  <div id="expr4_txt">A</div>
+                  <div id="exprPlus4_mc">+</div>
+                  <div id="expr5_txt">A</div>
+                </div>
+             
+             
               <div class="vals_txt">
                 <div>=</div>
                 <div id="val1_txt">19325</div>
@@ -395,7 +406,9 @@
                 <div id="valPlus4_mc">+</div>
                 <div id="val5_txt">19325</div>
               </div>
-              <div class="answer_txt"><div>=</div><div id="answer_txt">19325</div></div>
+            
+              <div class="answer_txt"><div>=</div><div id="answer_txt" class="answer_val">19325</div></div>
+           
             </div>
           </div>
           

@@ -59,7 +59,7 @@
     color: var(--theme-copy-text);
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 5px;
     justify-content: right;
     width: auto;
     background: transparent;
@@ -93,7 +93,7 @@
     color: var(--theme-copy-text);
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 5px;
     justify-content: right;
     width: auto;
     background: transparent;
@@ -146,7 +146,7 @@
     font-size: 40px;
   }
   .launch .exp_header .title {
-    padding: 0.5em 0.5em 0.1em 0.5em;
+    padding: 0.2em 0.5em 0em 0.5em;
   }
   .launch .exp_header .sub-title {
     margin-bottom: 0.5em;
@@ -191,15 +191,15 @@
     font-size: 14px !important;
   }
   .config_cont input {
-    width: 60px !important;
+    width: 55px !important;
   }
 
   .config_cont input {
     text-align: center;
     width: 100px;
-    border: none;
-    outline: none;
-    color: inherit;
+    /*outline: none;
+    color: inherit;*/
+    margin: 1px 2px;
   }
   .ques_cont {
     width: 100%;
@@ -224,7 +224,7 @@
     font-size: 18px !important;
   }
   #numbInput_txt {
-    width: 80% !important;
+    /*width: 80% !important;*/
     font-size: 18px !important;
   }
 
@@ -248,9 +248,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: max-content;
-    top: 0% !important;
+    /*top: 0% !important;
     left: 50% !important;
-    transform: translate(-50%, 10%) !important;
+    transform: translate(-50%, 10%) !important;*/
+    margin: auto;
   }
   .birds_set_mc_txt {
     width: 270px !important;
@@ -301,5 +302,11 @@
     .main-src-logo {
     width: 64px;
     margin: 0em 0.5em;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .quiz_cont_inner{
+    margin-top: 100px;
   }
 }

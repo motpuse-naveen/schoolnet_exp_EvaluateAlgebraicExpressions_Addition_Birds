@@ -46,8 +46,8 @@ var GuidedTour = (function () {
           .removeAttr("data-bs-target")
       );
       $(".gt-clone").css({
-        left: myposition.left - 5,
-        top: myposition.top - 5,
+        left: myposition.left - 2,
+        top: myposition.top - 2,
       });
 
       var horSide = "left";

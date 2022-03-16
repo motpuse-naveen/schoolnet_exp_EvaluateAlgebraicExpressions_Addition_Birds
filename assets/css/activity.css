@@ -9,9 +9,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: max-content;
-  top: 50%;
+  /*top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
+  margin: 0px auto;
 }
 .birds_set_mc {
   position: absolute;
@@ -150,7 +151,7 @@
   border: 2px solid var(--theme-pri-color);
   border-radius: 5px;
   position: relative;
-  font-weight: bold;
+  /*font-weight: bold;*/
   margin: 25px 0px 5px 0px;
 }
 
@@ -164,11 +165,11 @@
 
 .instruction_cont .title_txt {
   color: #545454;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 .instruction_cont .instruction_txt {
   color: #a6162c;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-style: italic;
 }
 
@@ -177,15 +178,15 @@
   padding: 0px 30px;
   height: auto;
   width: 100%;
-  top: 50%;
+  /*top: 50%;
   left: 50%;
-  transform: translate(-50%, -65%);
+  transform: translate(-50%, -65%);*/
   position: relative;  
 }
 .quiz_cont_inner {
   position: relative;  
   width: 100%;
-  height: 290px;
+  /*height: 290px;*/
   padding: 10px 0px 10px 0px;
 }
 .config_cont {
@@ -225,9 +226,13 @@
 .config_cont input {
   text-align: center;
   width: 100px;
-  border: none;
   outline: none;
-  color: inherit;
+  /*color: inherit;*/
+  padding: 4px;
+  margin: 1px 5px;
+  border: 1px solid var(--theme-pri-color);
+  border-radius: 4px;
+  max-width: 80px;
 }
 
 .cmb_cont {
@@ -269,7 +274,7 @@
 
 .score_cont .score_title {
   color: #fff;
-  font-weight: bold;
+  /*font-weight: bold;*/
   float: left;
   width: 80px;
   padding: 4px 0px 0px 8px;
@@ -321,13 +326,13 @@
 
 .ques_content {
   float: left;
-  width: 55%;
+  width: 58%;
   height: 97px;
   /* background-color: #eff9e5; */
   background-color: var(--theme-sec-background);
   position: relative;
   padding: 25px 10px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   border: 2px solid #4b4b4b;
   border-bottom-left-radius: 5px;
 }
@@ -338,7 +343,7 @@
 }
 .ans_content {
   float: left;
-  width: 45%;
+  width: 42%;
   height: 97px;
   position: relative;
   padding: 30px 10px;
@@ -351,16 +356,18 @@
 }
 .numbInput_label {
   font-size: 20px;
+  position: absolute;
 }
 
 #numbInput_txt {
   font-size: 20px;
   text-align: right;
-  width: 90%;
+  width: 98%;
   border: none;
   outline: none;
   background-color: #fff;
   color: inherit;
+  max-width: 100%;
 }
 .wrong_mc {
   position: absolute;
@@ -385,7 +392,7 @@
   width: 35px;
   height: 35px;
   text-align: center;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 23px;
 }
 .correctAnswer_txt {
@@ -484,6 +491,7 @@ input[type="number"] {
 #explain_mc .popupcontent {
   position: relative;
   height: 93%;
+  min-height: 330px;
 }
 
 #explain_mc .birdsExplain_container {
@@ -749,7 +757,7 @@ input[type="number"] {
   width: 35px;
   height: 35px;
   text-align: center;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 23px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -762,7 +770,7 @@ input[type="number"] {
   width: 35px;
   height: 35px;
   text-align: center;
-  font-weight: bold;
+  /*font-weight: bold;*/
   font-size: 23px;
 }
 .popup_inst .score_cont {

@@ -185,7 +185,7 @@ function newQuestion() {
 
   shuffle(exprOrderArray);
 
-  $(".qNo_txt").text("Q " + curQtnNo + ": What is the value of?");
+  $(".qNo_txt").text("Q " + curQtnNo + ": What is the value of ?");
   $("#explain_mc").hide();
   $("#OK_btn").show();
   $(".correct_mc").hide();
@@ -393,7 +393,7 @@ $("#explain_btn").on("click", function () {
     $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").show();
     // $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: explainMCXArray[k], top: explainMCYArray[k]});   
     $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: Math.round($(explainTextArray[k]).position().left)+30, top: Math.round($(explainTextArray[k]).position().top)});
-    $(explainTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + "= " + birdCountArray[birdOrderArray[k]]);
+    $(explainTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
   }
 
   for (var j = 0; j <= 4; j++) {

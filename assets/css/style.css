@@ -89,7 +89,7 @@ body[platform="ios"]{
   color: var(--theme-pri-text-color);
   border: 1px solid var(--theme-btn-border);
   text-align: center;
-  margin: 10px;
+  margin: 5px;
   min-width: 130px;
 }
 
@@ -818,4 +818,8 @@ svg .cls-101 {
   border: 1px solid #fff !important;
   box-shadow: rgb(0 0 0 / 80%) 1px 1px 4px 1px;
   font-family: 'Montserrat-Regular';
+}
+
+.answer_val{
+  color: #bc0000 !important;
 }
