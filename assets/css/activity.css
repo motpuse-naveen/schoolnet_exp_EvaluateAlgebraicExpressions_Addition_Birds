@@ -331,7 +331,7 @@
   /* background-color: #eff9e5; */
   background-color: var(--theme-sec-background);
   position: relative;
-  padding: 25px 10px;
+  padding: 8px 10px;
   /*font-weight: bold;*/
   border: 2px solid #4b4b4b;
   border-bottom-left-radius: 5px;
@@ -588,8 +588,8 @@ input[type="number"] {
   height: 30%;
   border-top: 2px solid #4b4b4b;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /*flex-direction: column;
+  justify-content: center;*/
   bottom: 0px;
   width: 100%;
   position: absolute;
@@ -603,40 +603,41 @@ input[type="number"] {
   display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   font-family: "Montserrat-Bold";
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-left: 18px;
 }
 .exprs_txt div {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .vals_txt {
   display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   font-family: "Montserrat-Bold";
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .vals_txt div {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .answer_txt {
   display: flex;
   text-align: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   font-family: "Montserrat-Bold";
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .answer_txt div {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 .btn_close {
   position: absolute;
@@ -815,4 +816,15 @@ input[type="number"] {
   position: absolute;
   left: 5px;
   top: 17px;
+}
+
+.flexcenter{
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.centertable{
+  display: inline-block;
+    margin: auto;
 }

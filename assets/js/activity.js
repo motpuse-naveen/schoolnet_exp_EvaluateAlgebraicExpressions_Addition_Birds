@@ -185,7 +185,7 @@ function newQuestion() {
 
   shuffle(exprOrderArray);
 
-  $(".qNo_txt").text("Q " + curQtnNo + ": What is the value of ?");
+  $(".qNo_txt").html("<div>Q " + curQtnNo + "</div><div> What is the value of:<div>");
   $("#explain_mc").hide();
   $("#OK_btn").show();
   $(".correct_mc").hide();
