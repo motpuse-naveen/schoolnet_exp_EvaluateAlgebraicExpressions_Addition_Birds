@@ -47,7 +47,7 @@ var ScreenSplitter = (function () {
             $("#split-1").removeAttr("style");
             split_instance = Split(['#split-0', '#split-1'], {
                 minSize: 200,
-                sizes: [50, 50],
+                sizes: [48, 52],
                 gutterSize: 1,
                 onDrag: function (sizes) {
                     /* Scale Spring to fit */
@@ -56,7 +56,6 @@ var ScreenSplitter = (function () {
                     ScreenSplitter.ScaleToFit($("#split-1"));
                 },
             });
-            
             // $(".gutter").append(horizontalHandle);
         },
         VerticalSplit: function () {

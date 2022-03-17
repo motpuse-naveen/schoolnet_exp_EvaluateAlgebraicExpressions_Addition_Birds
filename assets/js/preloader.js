@@ -31,7 +31,7 @@ var imgPreloadArray = new Array(
 
 /*--Audio--*/
 var audioPreloadArray = [];
-$(document).ready(function () {});
+$(document).ready(function () { });
 //Html is bydefault added to html
 //generatePreloader();
 setTimeout(function () {
@@ -70,6 +70,7 @@ function imagePreloaded() {
     setTimeout(function () {
       $(".preloader").remove();
       $(".container-so.launch").show();
+      ActivityShell.Init();
     }, 50);
   }
 }

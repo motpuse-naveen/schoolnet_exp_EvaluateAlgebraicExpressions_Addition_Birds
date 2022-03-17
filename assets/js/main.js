@@ -26,6 +26,10 @@ var ActivityShell = (function () {
       this.InitToolTip();
     },
     LaunchActivity: function () {
+      var deviceType = ActivityShell.DeviceType();
+      if (deviceType == "mobile") {
+        //openFullscreen()
+      }
       $(".container-so.launch").fadeOut();
       $(".container-so.main").show();
       this.AdjustContainerHeight();
@@ -38,21 +42,30 @@ var ActivityShell = (function () {
       ScreenSplitter.ScaleToFit($("#split-1"));
     },
     AdjustContainerHeight: function () {
-      $(".wrapper").css({
-        "height": window.innerHeight + "px"
-      });
+      var deviceType = ActivityShell.DeviceType();
+      if (deviceType == "mobile") {
+        $(".wrapper").css({
+          //"height": window.screen.height + "px"
+          "height": window.innerHeight + "px"
+        });
+      }
+      else{
+        $(".wrapper").css({
+          "height": window.innerHeight + "px"
+        });
+      }
       if ($(".container-so.main").is(":visible")) {
         var headerHt = $(".container-so.main .exp_header").outerHeight();
         var footerHt = $(".container-so.main .exp_footer").outerHeight();
         $(".exp_body_header").css({ "height": headerHt + "px" });
         $(".exp_body_footer").css({ "height": footerHt + "px" });
         var mainHt = $(".container-so.main").height();
-        var deviceType = ActivityShell.DeviceType();
         if (deviceType != "mobile") {
         }
         else{
           $(".wrapper").attr("device","mobile");
-          headerHt = 0;          
+          headerHt = 0; 
+          //mainHt =  window.screen.height; 
         }
         $(".exp_body_content").css({ "height": (mainHt - (headerHt + footerHt))});
       }
@@ -179,7 +192,7 @@ var ActivityShell = (function () {
 })();
 
 $(document).ready(function () {
-  ActivityShell.Init();
+  //ActivityShell.Init();
 });
 document.ontouchmove = function(event){
   event.preventDefault();
@@ -222,3 +235,26 @@ $(document).on("click", ".btn-close-popup", function (event) {
 
 });
 /*End Common Popup Script */
+
+var elem = document.documentElement;
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}

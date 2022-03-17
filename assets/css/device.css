@@ -137,13 +137,13 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-device-width: 480px) and (max-device-width: 980px) and (max-device-height: 568px) {
+@media screen and (orientation: landscape) and (min-device-width: 380px)and (max-device-width: 990px) and (max-device-height: 990px) {
   .titledesktop {
     display: none !important;
   }
   .titlemobile {
     display: block !important;
-    font-size: 40px;
+    font-size: 36px;
   }
   .launch .exp_header .title {
     padding: 0.2em 0.5em 0em 0.5em;
@@ -154,10 +154,10 @@
   .launch .exp_header img.logo {
     width: 180px;
   }
-  .wrapper {
+  /*.wrapper {
     min-height: auto;
     max-height: 100%;
-  }
+  }*/
   #split-0,
   #split-1 {
     height: 100% !important;
@@ -280,6 +280,15 @@
   }
   .container-so.main .exp_footer .footer .copyrighttext {
     display: none;
+  }
+  .birdsExplain{
+    font-size: 14px;
+  }
+  .footer-menu-container{
+    width: 100%;
+  }
+  .footer-menu-container div.btn-wrap{
+    float: right;
   }
 
 }

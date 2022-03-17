@@ -481,12 +481,17 @@ input[type="number"] {
   z-index: 10000;
   top: 0px;
   left: 0px;
-  overflow: hidden;
+  overflow: auto;
   border-top: none;
+  background-color: #FFF;
 }
 #explain_mc .popuphead {
   position: relative;
-  height: 7%;
+  /*height: 7%;*/
+  background-color: var(--theme-popup-background);
+}
+#explain_mc .popuphead h2{
+  padding: 10px 0px;
 }
 #explain_mc .popupcontent {
   position: relative;
@@ -503,6 +508,7 @@ input[type="number"] {
   top: 0px;
   left: 0px;
   width: 100%;
+  background-color: var(--theme-popup-background);
 }
 
 .birdsExplain {
