@@ -290,6 +290,21 @@
   .footer-menu-container div.btn-wrap{
     float: right;
   }
+  .Explain_mc_birdrow{
+    padding-top: 0px !important;
+  }
+  .Explain_mc_birdrow .colbird {
+    padding: 10px !important;
+    min-width: auto !important;
+    max-width: auto !important;
+    font-size: 12px;
+  }
+  .birdsExplain_div{
+    height: 80px !important;
+  }
+  #explain_mc .birdsAnswer_container{
+    padding-top: 10px !important;
+  }
 
 }
 
