@@ -34,8 +34,8 @@ var screenMCYArray = new Array(5);
 var screenTextArray = new Array(5);
 
 for (var i = 0; i <= 4; i++) {
-  screenMCXArray[i] = $("#set_mc").find("#"+birdNameArray[i] + "Set_mc").css("left");
-  screenMCYArray[i] = $("#set_mc").find("#"+birdNameArray[i] + "Set_mc").css("top");
+  screenMCXArray[i] = $("#set_mc").find("#" + birdNameArray[i] + "Set_mc").css("left");
+  screenMCYArray[i] = $("#set_mc").find("#" + birdNameArray[i] + "Set_mc").css("top");
   screenTextArray[i] = $("#set_mc").find("#bird" + (i + 1) + "_set_mc_txt");
 }
 
@@ -44,8 +44,8 @@ var explainMCYArray = new Array(5);
 var explainTextArray = new Array(5);
 
 for (var j = 0; j <= 4; j++) {
-  explainMCXArray[j] = $("#explain_mc").find("#"+birdNameArray[j] + "Explain_mc").css("left");
-  explainMCYArray[j] = $("#explain_mc").find("#"+birdNameArray[j] + "Explain_mc").css("top");
+  explainMCXArray[j] = $("#explain_mc").find("#" + birdNameArray[j] + "Explain_mc").css("left");
+  explainMCYArray[j] = $("#explain_mc").find("#" + birdNameArray[j] + "Explain_mc").css("top");
   explainTextArray[j] = $("#explain_mc").find("#bird" + (j + 1) + "_birdsExplain_txt");
 }
 
@@ -58,11 +58,11 @@ var noOfTerms;
 var valueOfExpr = 0;
 
 var EvaluateAlgebraicExpressions = (function () {
-  return {    
-    LaunchActivity: function () {    
-      
-      for (var i = 0; i < birdNameArray.length ; i++) {
-        initSet($("#set_mc").find("#"+birdNameArray[i] + "Set_mc"), birdNameArray[i] + "Pix_sym");        
+  return {
+    LaunchActivity: function () {
+
+      for (var i = 0; i < birdNameArray.length; i++) {
+        initSet($("#set_mc").find("#" + birdNameArray[i] + "Set_mc"), birdNameArray[i] + "Pix_sym");
       }
       noOfDigits = Number($("#noOfDigitsInput_txt").val());
       maxTerms = Number($("#maxTermsInput_txt").val());
@@ -72,42 +72,42 @@ var EvaluateAlgebraicExpressions = (function () {
     OnOrientationChange: function () {
       console.log("OnOrientationChange");
       for (var k = 0; k <= 4; k++) {
-        $("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc").css({left: Math.round($(screenTextArray[k]).position().left)-20, top: Math.round($(screenTextArray[k]).position().top)+8});
+        $("#set_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Set_mc").css({ left: Math.round($(screenTextArray[k]).position().left) - 20, top: Math.round($(screenTextArray[k]).position().top) + 8 });
 
-        $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: Math.round($(explainTextArray[k]).position().left)+30, top: Math.round($(explainTextArray[k]).position().top)-100});
-      } 
+        $("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").css({ left: Math.round($(explainTextArray[k]).position().left) + 30, top: Math.round($(explainTextArray[k]).position().top) - 100 });
+      }
     },
   };
 })();
 
-$(".noOfDigits_cont .btn_minus").on("click", function () {  
+$(".noOfDigits_cont .btn_minus").on("click", function () {
   noOfDigits_cmb_Listener("minus");
 });
 
-$(".noOfDigits_cont .btn_plus").on("click", function () {  
+$(".noOfDigits_cont .btn_plus").on("click", function () {
   noOfDigits_cmb_Listener("plus");
 });
 
-function noOfDigits_cmb_Listener(id) {  
+function noOfDigits_cmb_Listener(id) {
   var min = Number($("#noOfDigitsInput_txt").attr('min'));
   var value = Number($("#noOfDigitsInput_txt").val());
   var max = Number($("#noOfDigitsInput_txt").attr('max'));
-  if(id==="minus"){    
-    value = Number($($("#noOfDigitsInput_txt").val(value-1)).val());
+  if (id === "minus") {
+    value = Number($($("#noOfDigitsInput_txt").val(value - 1)).val());
   }
-  if(id==="plus"){
-    value = Number($($("#noOfDigitsInput_txt").val(value+1)).val());
-  } 
+  if (id === "plus") {
+    value = Number($($("#noOfDigitsInput_txt").val(value + 1)).val());
+  }
 
-  if(value === min){
-    $(".noOfDigits_cont .btn_minus").attr("disabled","disaled");
-  }else{
+  if (value === min) {
+    $(".noOfDigits_cont .btn_minus").attr("disabled", "disaled");
+  } else {
     $(".noOfDigits_cont .btn_minus").removeAttr("disabled");
   }
 
-  if(value === max){
-    $(".noOfDigits_cont .btn_plus").attr("disabled","disaled");
-  }else{
+  if (value === max) {
+    $(".noOfDigits_cont .btn_plus").attr("disabled", "disaled");
+  } else {
     $(".noOfDigits_cont .btn_plus").removeAttr("disabled");
   }
 
@@ -115,11 +115,11 @@ function noOfDigits_cmb_Listener(id) {
   resetExperiment();
 }
 
-$(".maxTerms_cont .btn_minus").on("click", function () {  
+$(".maxTerms_cont .btn_minus").on("click", function () {
   maxTerms_cmb_Listener("minus");
 });
 
-$(".maxTerms_cont .btn_plus").on("click", function () {  
+$(".maxTerms_cont .btn_plus").on("click", function () {
   maxTerms_cmb_Listener("plus");
 });
 
@@ -127,22 +127,22 @@ function maxTerms_cmb_Listener(id) {
   var min = Number($("#maxTermsInput_txt").attr('min'));
   var value = Number($("#maxTermsInput_txt").val());
   var max = Number($("#maxTermsInput_txt").attr('max'));
-  if(id==="minus"){    
-    value = Number($($("#maxTermsInput_txt").val(value-1)).val());
+  if (id === "minus") {
+    value = Number($($("#maxTermsInput_txt").val(value - 1)).val());
   }
-  if(id==="plus"){
-    value = Number($($("#maxTermsInput_txt").val(value+1)).val());
-  } 
+  if (id === "plus") {
+    value = Number($($("#maxTermsInput_txt").val(value + 1)).val());
+  }
 
-  if(value === min){
-    $(".maxTerms_cont .btn_minus").attr("disabled","disaled");
-  }else{
+  if (value === min) {
+    $(".maxTerms_cont .btn_minus").attr("disabled", "disaled");
+  } else {
     $(".maxTerms_cont .btn_minus").removeAttr("disabled");
   }
 
-  if(value === max){
-    $(".maxTerms_cont .btn_plus").attr("disabled","disaled");
-  }else{
+  if (value === max) {
+    $(".maxTerms_cont .btn_plus").attr("disabled", "disaled");
+  } else {
     $(".maxTerms_cont .btn_plus").removeAttr("disabled");
   }
 
@@ -169,18 +169,18 @@ function newQuestion() {
 
   for (var j = 0; j < birdNameArray.length; j++) {
     birdCountArray[j] = parseInt(Math.random() * (tenFactor - 1)) + 1;
-    $("#set_mc").find("#"+birdNameArray[j] + "Set_mc").hide();
-    $("#set_mc").find("#"+birdNameArray[j] + "Set_mc").css({left: 0, top: 0});
+    $("#set_mc").find("#" + birdNameArray[j] + "Set_mc").hide();
+    $("#set_mc").find("#" + birdNameArray[j] + "Set_mc").css({ left: 0, top: 0 });
   }
 
   shuffle(birdOrderArray);
 
   for (var k = 0; k <= 4; k++) {
     // showSet($("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc"), birdCountArray[birdOrderArray[k]]);
-    $("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc").show();
+    $("#set_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Set_mc").show();
     // $("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc").css({left: screenMCXArray[k], top: screenMCYArray[k]});
-    $("#set_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Set_mc").css({left: Math.round($(screenTextArray[k]).position().left)-20, top: Math.round($(screenTextArray[k]).position().top)+8});
-    $(screenTextArray[k]).text( "" + birdVarNameArray[birdOrderArray[k]] + " = " + "No. of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
+    $("#set_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Set_mc").css({ left: Math.round($(screenTextArray[k]).position().left) - 20, top: Math.round($(screenTextArray[k]).position().top) + 8 });
+    $(screenTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "No. of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
   }
 
   shuffle(exprOrderArray);
@@ -211,143 +211,143 @@ function newQuestion() {
   $(".qtn_txt").text(mStr);
 }
 function initSet(my_mc, myLibStr) {
-	// var mRow, mCol;
-	var pix_mc;
+  // var mRow, mCol;
+  var pix_mc;
 
   // for (var i = 1; i <= 1; i++) {
-		pix_mc = ('<div class="'+myLibStr+'"> </div>');
-    $(my_mc).append(pix_mc);
-		/* mRow = parseInt((i-1)/3);
-		mCol = (i-1) - 3*mRow;
-    $(pix_mc).css({ left: 50, top: 50});		 */
-	// }  
+  pix_mc = ('<div class="' + myLibStr + '"> </div>');
+  $(my_mc).append(pix_mc);
+  /* mRow = parseInt((i-1)/3);
+  mCol = (i-1) - 3*mRow;
+  $(pix_mc).css({ left: 50, top: 50});		 */
+  // }  
 }
 
 /* function initSet(my_mc, myLibStr) {
-	var mRow, mCol;
-	var pix_mc;
+  var mRow, mCol;
+  var pix_mc;
 
   for (var i = 1; i <= 9; i++) {
-		pix_mc = ('<div id="pix'+ i +'_mc" class="'+myLibStr+'"> </div>');
+    pix_mc = ('<div id="pix'+ i +'_mc" class="'+myLibStr+'"> </div>');
     $(my_mc).append(pix_mc);
-		mRow = parseInt((i-1)/3);
-		mCol = (i-1) - 3*mRow;
+    mRow = parseInt((i-1)/3);
+    mCol = (i-1) - 3*mRow;
     $(pix_mc).css({ left: mCol*50, top: mRow*50});		
-	}
+  }
 
   for (var j = 1; j <= 36; j++) {
     pix_mc = ('<div id="pixSmall'+ j +'_mc" class="'+myLibStr+'"> </div>');
     $(my_mc).append(pix_mc);
-		mRow = parseInt((j-1)/6);
-		mCol = (j-1) - 6*mRow;
+    mRow = parseInt((j-1)/6);
+    mCol = (j-1) - 6*mRow;
     $(pix_mc).css({width: 25, height:25});		
     $(pix_mc).css({left: mCol*25, top: mRow*25});
-	}
+  }
 }
 
 function showSet(my_mc, myCount) {
-	var mRow, mCol;
-	var pix_mc; 
+  var mRow, mCol;
+  var pix_mc; 
 	
-	if (myCount <= 9) {
-		for (var i  = 1; i <=9; i++) {
+  if (myCount <= 9) {
+    for (var i  = 1; i <=9; i++) {
       if((i <= myCount)){
         $(my_mc).find('#pix' + i + '_mc').show();
       }else{
         $(my_mc).find('#pix' + i + '_mc').hide();
       }
-		}
-		for (var j = 1; j <= 36; j++) {
+    }
+    for (var j = 1; j <= 36; j++) {
       $(my_mc).find('#pixSmall' + j + '_mc').hide();
-		}
-		
-		switch (myCount) {
-			case 1 :
+    }
+  	
+    switch (myCount) {
+      case 1 :
         $(my_mc).find("#pix1_mc").css({left: 50, top: 50});
-				break;
-			
-			case 2 :
+        break;
+    	
+      case 2 :
         $(my_mc).find("#pix1_mc").css({left: 15, top: 50});
         $(my_mc).find("#pix2_mc").css({left: 85, top: 50});
-				break;
+        break;
 
-			case 3 :
+      case 3 :
         $(my_mc).find("#pix1_mc").css({left: 50, top: 25});
         $(my_mc).find("#pix2_mc").css({left: 15, top: 75});
         $(my_mc).find("#pix3_mc").css({left: 85, top: 75});
-				break;
-				
-			case 4 :
+        break;
+      	
+      case 4 :
         $(my_mc).find("#pix1_mc").css({left: 15, top: 25});
         $(my_mc).find("#pix2_mc").css({left: 85, top: 25});
         $(my_mc).find("#pix3_mc").css({left: 15, top: 75});
         $(my_mc).find("#pix4_mc").css({left: 85, top: 75});
-  			break;
+        break;
 
-			case 5 :
+      case 5 :
         $(my_mc).find("#pix1_mc").css({left: 15, top: 15});
         $(my_mc).find("#pix2_mc").css({left: 85, top: 15});
         $(my_mc).find("#pix3_mc").css({left: 50, top: 50});
         $(my_mc).find("#pix4_mc").css({left: 15, top: 85});
         $(my_mc).find("#pix5_mc").css({left: 85, top: 85});
-				break;
+        break;
 
-			case 6 :
+      case 6 :
         $(my_mc).find("#pix1_mc").css({left: 10, top: 10});
         $(my_mc).find("#pix2_mc").css({left: 90, top: 10});
         $(my_mc).find("#pix3_mc").css({left: 25, top: 50});
         $(my_mc).find("#pix4_mc").css({left: 75, top: 50});
         $(my_mc).find("#pix5_mc").css({left: 10, top: 90});
         $(my_mc).find("#pix6_mc").css({left: 90, top: 90});
-				break;
-				
-			case 7 :
-				for (var k = 1; k <= 6; k++) {
+        break;
+      	
+      case 7 :
+        for (var k = 1; k <= 6; k++) {
           pix_mc = $(my_mc).find('#pix' + k + '_mc');
           mRow = parseInt((k-1)/3);
-					mCol = (k-1) - 3*mRow;
+          mCol = (k-1) - 3*mRow;
           $(pix_mc).css({left: mCol*50, top: mRow*50});
-				}
+        }
         $(my_mc).find("#pix7_mc").css({left: 50, top: 100});
-				break;
+        break;
 
-			case 8 :
-				for (var l = 1; l <= 6; l++) {
+      case 8 :
+        for (var l = 1; l <= 6; l++) {
           pix_mc = $(my_mc).find('#pix' + l + '_mc');
           mRow = parseInt((l-1)/3);
-					mCol = (l-1) - 3*mRow;
+          mCol = (l-1) - 3*mRow;
           $(pix_mc).css({left: mCol*50, top: mRow*50});
-				}
+        }
         $(my_mc).find("#pix7_mc").css({left: 0, top: 100});
         $(my_mc).find("#pix8_mc").css({left: 100, top: 100});
-				break;
-			
-			case 9 :
-				for (var m = 1; m <= 9; m++) {
+        break;
+    	
+      case 9 :
+        for (var m = 1; m <= 9; m++) {
           pix_mc = $(my_mc).find('#pix' + m + '_mc');
           mRow = parseInt((m-1)/3);
-					mCol = (m-1) - 3*mRow;
+          mCol = (m-1) - 3*mRow;
           $(pix_mc).css({left: mCol*50, top: mRow*50});
-				}
-				break; 				
-		}
-	}
-	else {
-		for (var n  = 1; n <=9; n++) {
+        }
+        break; 				
+    }
+  }
+  else {
+    for (var n  = 1; n <=9; n++) {
       $(my_mc).find('#pix' + n + '_mc').hide();
-		}
-		for (var o = 1; o <= 36; o++) {
+    }
+    for (var o = 1; o <= 36; o++) {
       $(my_mc).find('#pixSmall' + o + '_mc').show();
-		}
-		
-		for (var p = 1; p <= 36; p++) {
+    }
+  	
+    for (var p = 1; p <= 36; p++) {
       pix_mc = $(my_mc).find('#pixSmall' + p + '_mc');
       mRow = parseInt((p-1)/6);
-			mCol = (p-1) - 6*mRow;
+      mCol = (p-1) - 6*mRow;
       $(pix_mc).css({width: 25, height:25});		
       $(pix_mc).css({left: 18 + mCol*22 + parseInt(Math.random()*20) - 10, top: 18 + mRow*22 + parseInt(Math.random()*20) - 10});
-		}		
-	}		
+    }		
+  }		
 } */
 
 $("#btn_reset").on("click", function () {
@@ -366,11 +366,11 @@ $("#OK_btn").on("click", function () {
     $(".correct_mc").show();
     $(".ans_content").removeClass("wrong_txt");
   } else {
-    totalQtns++;    
+    totalQtns++;
     $(".score_txt").text("" + correctQtns + "/" + totalQtns);
     $(".wrong_mc").show();
     $(".correctAnswer_txt").show();
-    $(".correctAnswer_txt").html("Correct Answer = <span>" + valueOfExpr+"</span>");
+    $(".correctAnswer_txt").html("Correct Answer = <span>" + valueOfExpr + "</span>");
     $(".ans_content").addClass("wrong_txt");
   }
 });
@@ -383,23 +383,23 @@ $("#next_btn").on("click", function () {
 $("#explain_btn").on("click", function () {
   $("#explain_mc").show();
 
-  for (var i = 0; i <birdNameArray.length; i++) {
-    $("#explain_mc").find("#"+birdNameArray[i] + "Explain_mc").hide();
-    $("#explain_mc").find("#"+birdNameArray[i] + "Explain_mc").css({left: 0, top: 0});
-	}
+  for (var i = 0; i < birdNameArray.length; i++) {
+    $("#explain_mc").find("#" + birdNameArray[i] + "Explain_mc").hide();
+    $("#explain_mc").find("#" + birdNameArray[i] + "Explain_mc").css({ left: 0, top: 0 });
+  }
 
   for (var k = 0; k <= 4; k++) {
     console.log(explainMCXArray[k], explainMCYArray[k]);
-    $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").show();
+    $("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").show();
     // $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: explainMCXArray[k], top: explainMCYArray[k]});   
-    $("#explain_mc").find("#"+birdNameArray[birdOrderArray[k]] + "Explain_mc").css({left: Math.round($(explainTextArray[k]).position().left)+30, top: Math.round($(explainTextArray[k]).position().top)});
+    $("#explain_mc").find("#" + birdNameArray[birdOrderArray[k]] + "Explain_mc").css({ left: Math.round($(explainTextArray[k]).position().left) + 30, top: Math.round($(explainTextArray[k]).position().top) });
     $(explainTextArray[k]).text("" + birdVarNameArray[birdOrderArray[k]] + " = " + "Number of " + birdPluralArray[birdOrderArray[k]] + " = " + birdCountArray[birdOrderArray[k]]);
   }
 
   for (var j = 0; j <= 4; j++) {
     if (j < noOfTerms) {
       $("#explain_mc").find("#expr" + (j + 1) + "_txt").text(birdVarNameArray[birdOrderArray[exprOrderArray[j]]]);
-      $("#explain_mc").find("#val" + (j + 1) + "_txt").text( "" + birdCountArray[birdOrderArray[exprOrderArray[j]]]);
+      $("#explain_mc").find("#val" + (j + 1) + "_txt").text("" + birdCountArray[birdOrderArray[exprOrderArray[j]]]);
 
       $("#explain_mc").find("#expr" + (j + 1) + "_txt").show();
       $("#explain_mc").find("#val" + (j + 1) + "_txt").show();
