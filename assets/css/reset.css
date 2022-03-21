@@ -360,7 +360,7 @@ button,
 input,
 select,
 textarea {
-    /*color: var(--primary-text);*/
+    color: var(--primary-text);
 }
 
 
