@@ -6,6 +6,7 @@ var ActivityShell = (function () {
         "height": window.innerHeight + "px"
       })
       var deviceType = ActivityShell.DeviceType();
+      //alert("dt: " + deviceType + ", wdt: " + window.screen.width + ", ht: " + window.screen.height )
       $(".wrapper").attr("device",deviceType);
       if(this.IsIOSDevice()){
         $("body").attr("platform","ios")
@@ -34,7 +35,7 @@ var ActivityShell = (function () {
       $(".container-so.main").show();
       this.AdjustContainerHeight();
       ScreenSplitter.InitSplitter();
-      //GuidedTour.Init();
+      GuidedTour.Init();
       EvaluateAlgebraicExpressions.LaunchActivity();
       /* Scale Spring to fit */
       ScreenSplitter.ScaleToFit($("#split-0"));
