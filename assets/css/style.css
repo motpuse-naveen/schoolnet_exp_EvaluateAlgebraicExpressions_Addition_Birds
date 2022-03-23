@@ -634,7 +634,7 @@ svg .cls-101 {
   bottom: 0;
   right: 0;
   background: #000;
-  opacity: 0.9;
+  opacity: 0.8;
   z-index: 1000;
 }
 .gt-instr-box {
@@ -671,6 +671,18 @@ svg .cls-101 {
   border-radius: 20px;
   padding: 4px 15px 4px 15px;
   background-color: transparent;
+}
+.btn_skip_gt{
+  color: var(--theme-pri-text-color);
+  border: 1px solid var(--theme-pri-text-color);
+  border-radius: 20px;
+  padding: 4px 15px 4px 15px;
+  background-color: transparent;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 1001;
+  font-size: 14px;
 }
 .btn_Next_gt {
   background-image: url(../images/next-arrow.svg);

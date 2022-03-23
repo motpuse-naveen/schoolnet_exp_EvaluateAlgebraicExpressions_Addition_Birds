@@ -103,8 +103,7 @@ var ActivityShell = (function () {
       if (deviceType != "mobile") {
         $("#split-main").css({ "width": $(".wrapper").width()});
       }
-    }, 
-    
+    },
     AdjustSplitPanelsOnCloseCustomPopup: function () {
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "mobile") {
@@ -157,6 +156,7 @@ var ActivityShell = (function () {
           $("#bestviewed_popup_msg").hide();
         }
       }
+      GuidedTour.OnResize();
     },
     IsIOSDevice: function(){
       if (/iPad|iPhone|iPod/.test(navigator.platform)) {
@@ -180,12 +180,13 @@ var ActivityShell = (function () {
       /* Scale Graph to fit */
       ScreenSplitter.ScaleToFit($("#split-1"));
       }
+      GuidedTour.OnResize();
     },
     InitToolTip: function(){
       var deviceType = ActivityShell.DeviceType();
       if (deviceType == "desktop") {
         if(!this.IsIOSDevice()){
-          $("button[data-toggle='tooltip']").tooltip({ boundary: 'window', container: $(".wrapper"), trigger: "hover" })
+          $("button[data-toggle='tooltip']").tooltip({ boundary: 'window', container: $(".wrapper"), trigger: "hover",delay: { show: 500, hide: 100 } })
         }
       }
     }
