@@ -260,3 +260,9 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
 }
+
+$(document).on('shown.bs.tooltip', function (e) {
+  setTimeout(function () {
+    $(e.target).tooltip('hide');
+  }, 1500);
+});

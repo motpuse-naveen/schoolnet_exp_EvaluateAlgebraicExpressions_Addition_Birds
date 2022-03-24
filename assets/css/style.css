@@ -830,6 +830,7 @@ svg .cls-101 {
   border: 1px solid #fff !important;
   box-shadow: rgb(0 0 0 / 80%) 1px 1px 4px 1px;
   font-family: 'Montserrat-Regular';
+  opacity: 0.8;
 }
 
 .answer_val{
