@@ -197,7 +197,10 @@ $(document).ready(function () {
   //ActivityShell.Init();
 });
 document.ontouchmove = function(event){
-  event.preventDefault();
+  try{
+    event.preventDefault();
+  }
+  catch(err){}
 }
 
 $(window).bind('orientationchange', function () {
