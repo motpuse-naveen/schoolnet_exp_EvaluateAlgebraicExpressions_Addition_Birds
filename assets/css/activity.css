@@ -1,19 +1,20 @@
 #set_mc {
-  padding: 0px 30px 0px 30px;
+  /*padding: 0px 30px 0px 30px;*/
   width: 100%;
   position: relative;
-  height: 100%;
-  min-height: 500px;
+  /*height: 100%;
+  min-height: 500px;*/
   overflow: auto;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly;*/
   width: max-content;
   /*top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);*/
   margin: 0px auto;
 }
+
 .birds_set_mc {
   position: absolute;
   width: 65px;
@@ -22,7 +23,11 @@
   border: 2px solid var(--theme-pri-color);
   border-radius: 50%;
   z-index: 5;
+  left: -18px;
+  top: -12px;
 }
+
+/*
 #eagleSet_mc {
   left: 40px;
   top: 40px;
@@ -43,27 +48,30 @@
   left: 40px;
   top: 440px;
 }
+*/
 
 .eaglePix_sym {
   width: 65px;
-  height: 85px;
+  height: 75px;
   background-image: url(../images/birds/eagle.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -15px;
   left: 0px;
 }
+
 .hornbillPix_sym {
   width: 70px;
-  height: 100px;
+  height: 90px;
   background-image: url(../images/birds/hornbill.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -20px;
 }
+
 .woodpeckerPix_sym {
   width: 50px;
-  height: 90px;
+  height: 85px;
   background-image: url(../images/birds/woodpecker.svg);
   background-repeat: no-repeat;
   position: absolute;
@@ -73,11 +81,11 @@
 
 .swanPix_sym {
   width: 75px;
-  height: 85px;
+  height: 75px;
   background-image: url(../images/birds/swan.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -15px;
   left: 5px;
 }
 
@@ -124,11 +132,11 @@
 
 .parrotPix_sym {
   width: 60px;
-  height: 100px;
+  height: 86px;
   background-image: url(../images/birds/parrot.svg);
   background-repeat: no-repeat;
   position: absolute;
-  top: -20px;
+  top: -16px;
   left: -1px;
 }
 
@@ -146,13 +154,13 @@
   /* width: 350px; */
   height: 48px;
   padding: 10px 20px 10px 60px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background-color: #fff;
   border: 2px solid var(--theme-pri-color);
   border-radius: 5px;
   position: relative;
   /*font-weight: bold;*/
-  margin: 25px 0px 5px 0px;
+  margin: 45px 30px;
 }
 
 /*Quiz div*/
@@ -167,6 +175,7 @@
   color: #545454;
   /*font-weight: bold;*/
 }
+
 .instruction_cont .instruction_txt {
   color: #a6162c;
   /*font-weight: bold;*/
@@ -181,14 +190,16 @@
   /*top: 50%;
   left: 50%;
   transform: translate(-50%, -65%);*/
-  position: relative;  
+  position: relative;
 }
+
 .quiz_cont_inner {
-  position: relative;  
+  position: relative;
   width: 100%;
   /*height: 290px;*/
-  padding: 10px 0px 10px 0px;
+  padding: 20px 0px 10px 0px;
 }
+
 .config_cont {
   margin-bottom: 40px;
   text-align: center;
@@ -196,6 +207,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .config_cont .btn_minus,
 .config_cont .btn_plus {
   border-radius: 50%;
@@ -207,6 +219,7 @@
   position: relative;
   float: left;
 }
+
 .config_cont .btn_minus span,
 .config_cont .btn_plus span {
   font-size: 40px;
@@ -216,9 +229,11 @@
   left: 5px;
   top: 17px;
 }
+
 .config_cont .btn_plus {
   float: right;
 }
+
 .config_cont button:focus {
   box-shadow: none;
 }
@@ -239,6 +254,7 @@
   background-color: #f2f2f2;
   padding: 20px;
 }
+
 .score_cont {
   border: 2px solid #4b4b4b;
   border-top-left-radius: 5px;
@@ -248,28 +264,22 @@
   /* background-color: #4b4b4b; */
   position: relative;
   background: rgb(75, 75, 75);
-  background: -moz-linear-gradient(
-    -25deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 80%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    -25deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 80%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 50%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b4b4b', endColorstr='#ffffff',GradientType=1 );
+  background: -moz-linear-gradient(-25deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 80%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(-25deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 80%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(90deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 50%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b4b4b', endColorstr='#ffffff', GradientType=1);
 }
 
 .score_cont .score_title {
@@ -282,30 +292,30 @@
   position: relative;
   top: 0px;
   left: 0px;
-  background: rgb(75, 75, 75); /* Old browsers */
-  background: -moz-linear-gradient(
-    -25deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 80%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 1) 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    -25deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 80%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 1) 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    115deg,
-    rgba(75, 75, 75, 1) 0%,
-    rgba(75, 75, 75, 1) 80%,
-    rgba(255, 255, 255, 1) 80%,
-    rgba(255, 255, 255, 1) 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b4b4b', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: rgb(75, 75, 75);
+  /* Old browsers */
+  background: -moz-linear-gradient(-25deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 80%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-25deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 80%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(115deg,
+      rgba(75, 75, 75, 1) 0%,
+      rgba(75, 75, 75, 1) 80%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b4b4b', endColorstr='#ffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
+
 .score_cont .score_txt {
   color: #4b4b4b;
   font-weight: bold;
@@ -320,14 +330,14 @@
 
 .ques_cont {
   width: 100%;
-  height: 100px;
+  /*height: 100px;*/
   position: relative;
 }
 
 .ques_content {
   float: left;
   width: 58%;
-  height: 97px;
+  /*height: 97px;*/
   /* background-color: #eff9e5; */
   background-color: var(--theme-sec-background);
   position: relative;
@@ -340,13 +350,15 @@
 .qtn_txt {
   font-size: 20px;
   padding-bottom: 10px;
+  font-style: italic;
 }
+
 .ans_content {
   float: left;
   width: 42%;
-  height: 97px;
+  /*height: 97px;*/
   position: relative;
-  padding: 30px 10px;
+  /*padding: 30px 10px;*/
   background-color: #fff;
   border-top: 2px solid #4b4b4b;
   border-right: 2px solid #4b4b4b;
@@ -354,8 +366,10 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 .numbInput_label {
   font-size: 20px;
+  margin-top: 2px;
   position: absolute;
 }
 
@@ -369,6 +383,7 @@
   color: inherit;
   max-width: 100%;
 }
+
 .wrong_mc {
   position: absolute;
   top: -45px;
@@ -382,6 +397,7 @@
   font-weight: bold;
   font-size: 23px;
 }
+
 .correct_mc {
   position: absolute;
   top: -45px;
@@ -395,16 +411,20 @@
   /*font-weight: bold;*/
   font-size: 23px;
 }
+
 .correctAnswer_txt {
   text-align: right;
   margin-top: 10px;
 }
+
 .correctAnswer_txt span {
   color: #00bf3a;
 }
+
 .wrong_txt {
   color: #bc0000;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -430,6 +450,7 @@ input[type="number"] {
 .btn_ok:hover {
   color: var(--theme-pri-text-color);
 }
+
 .btn_explain {
   color: var(--theme-pri-text-color);
   background-color: var(--theme-pri-color);
@@ -443,6 +464,7 @@ input[type="number"] {
 .btn_explain:hover {
   color: var(--theme-pri-text-color);
 }
+
 .btn_next {
   color: var(--theme-pri-text-color);
   background-color: var(--theme-pri-color);
@@ -478,21 +500,25 @@ input[type="number"] {
 /* Explain div */
 #explain_mc {
   /* padding: 20px; */
-  z-index: 10000;
+  /*z-index: 10000;
   top: 0px;
-  left: 0px;
+  left: 0px;*/
+  top: 0px;
   overflow: auto;
   border-top: none;
   background-color: #FFF;
 }
+
 #explain_mc .popuphead {
   position: relative;
   /*height: 7%;*/
   background-color: var(--theme-popup-background);
 }
-#explain_mc .popuphead h2{
+
+#explain_mc .popuphead h2 {
   /*padding: 10px 0px;*/
 }
+
 #explain_mc .popupcontent {
   position: relative;
   /*height: 93%;*/
@@ -530,10 +556,12 @@ input[type="number"] {
   background-position: center;
   margin-bottom: 10px;
 }
+
 #eagleExplain_mc {
   top: 0px;
   left: 20px;
 }
+
 #hornbillExplain_mc {
   top: 0px;
   left: 180px;
@@ -557,9 +585,11 @@ input[type="number"] {
 .eaglePix_explain {
   background-image: url(../images/birds/eagle.svg);
 }
+
 .hornbillPix_explain {
   background-image: url(../images/birds/hornbill.svg);
 }
+
 .woodpeckerPix_explain {
   background-image: url(../images/birds/woodpecker.svg);
 }
@@ -591,6 +621,7 @@ input[type="number"] {
 .owlPix_explain {
   background-image: url(../images/birds/owl.svg);
 }
+
 #explain_mc .birdsAnswer_container {
   background-color: #fff;
   /*height: 30%;*/
@@ -603,11 +634,13 @@ input[type="number"] {
   /*position: absolute;*/
   padding-top: 40px;
 }
+
 .birdsExplain_txt {
   font-family: "Montserrat-Bold";
   margin-top: 120px;
   width: 150px;
 }
+/*
 .exprs_txt {
   display: flex;
   text-align: center;
@@ -617,11 +650,14 @@ input[type="number"] {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 18px;
+  font-style: italic;
 }
+
 .exprs_txt div {
   padding-left: 6px;
   padding-right: 6px;
 }
+
 .vals_txt {
   display: flex;
   text-align: center;
@@ -631,10 +667,12 @@ input[type="number"] {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .vals_txt div {
   padding-left: 6px;
   padding-right: 6px;
 }
+
 .answer_txt {
   display: flex;
   text-align: center;
@@ -644,10 +682,22 @@ input[type="number"] {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .answer_txt div {
   padding-left: 6px;
   padding-right: 6px;
 }
+*/
+
+table.centertable{
+  margin: auto;
+  font-family: "Montserrat-Bold";
+}
+table.centertable tr td {
+  padding: 5px;
+  text-align: center;
+}
+
 .btn_close {
   position: absolute;
   top: 20px;
@@ -659,11 +709,13 @@ input[type="number"] {
 }
 
 .popup_inst {
-  z-index: 20;
+  /*z-index: 20;
   top: 0px;
   left: 0px;
-  margin-bottom: 48px;
+  margin-bottom: 48px;*/
+  z-index: 8;
 }
+
 .popup_inst .eaglePix {
   width: 50px;
   height: 80px;
@@ -699,6 +751,7 @@ input[type="number"] {
   float: left;
   margin-right: 20px;
 }
+
 .popup_inst .pelicanPix {
   width: 50px;
   height: 80px;
@@ -710,6 +763,7 @@ input[type="number"] {
   float: left;
   margin-right: 20px;
 }
+
 .popup_inst .robinPix {
   width: 50px;
   height: 80px;
@@ -734,10 +788,12 @@ input[type="number"] {
   border-bottom-right-radius: 5px;
   margin: 0px 0px 1rem 0px;
 }
+
 .popup_inst .numbInput_label {
   font-size: 20px;
   float: left;
 }
+
 .popup_inst .numbInput_txt {
   font-size: 20px;
   text-align: right;
@@ -760,6 +816,7 @@ input[type="number"] {
   margin: 0px 0px 1rem 0px;
   cursor: default;
 }
+
 .popup_inst .wrong {
   color: #fff;
   background-color: #bc0000;
@@ -783,9 +840,11 @@ input[type="number"] {
   /*font-weight: bold;*/
   font-size: 23px;
 }
+
 .popup_inst .score_cont {
   margin-bottom: 1rem;
 }
+
 .popup_inst .score {
   color: #4b4b4b;
   font-weight: bold;
@@ -797,6 +856,7 @@ input[type="number"] {
   background-color: #fff;
   border-top-right-radius: 5px;
 }
+
 .popup_inst .config_cont {
   margin-bottom: 1rem;
   text-align: center;
@@ -827,26 +887,80 @@ input[type="number"] {
   top: 17px;
 }
 
-.flexcenter{
+.flexcenter {
   display: flex;
   text-align: center;
   flex-direction: row;
   justify-content: center;
 }
-.centertable{
+
+.centertable {
   display: inline-block;
-    margin: auto;
+  margin: auto;
 }
-.Explain_mc_birdrow{
+
+.Explain_mc_birdrow {
   /*display: flex;*/
   margin: 0 !important;
-  padding-top: 100px;
+  /*padding-top: 100px;*/
 }
-.Explain_mc_birdrow .colbird{
+
+.Explain_mc_birdrow .colbird {
   padding: 30px;
   min-width: 200px;
   max-width: 330px;
 }
-.Explain_mc_birdrow .colbird .birdtext{
+
+.Explain_mc_birdrow .colbird .birdtext {
   text-align: center;
+}
+
+.content-container.mc {
+  min-width: 340px;
+  width: max-content;
+    margin: 0px auto;
+}
+
+.content-container.instr {
+  min-width: 310px;
+}
+.popup_mc{
+  display: none;
+  width: 100%;
+  background-color: var(--theme-popup-background);
+  overflow: auto;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid var(--theme-popup-border);
+  z-index: 21;
+  outline: 1px solid var(--theme-popup-border);
+}
+.popup_mc .container h2 {
+  color: var(--theme-pri-color);
+  font-family: "Montserrat-Bold";
+  font-size: 16px;
+  padding: 15px 0px;
+  margin: 0;
+}
+.wrapper[device="mobile"] .popup_mc {
+  height: 100%;
+}
+.popup_mc{
+  touch-action: pan-x pan-y;
+}
+@media only screen and (max-width: 490px) {
+  .button_style{
+      padding: 0.375rem 0.4rem;
+      min-width: 50px;
+  }
+  .container-so.main .exp_footer .footer{
+      padding-left: 46px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .button_style{
+    width: auto;
+  } 
 }
